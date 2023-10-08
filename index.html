@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--This I think is like a config file-->
 <head>
-    <title>My Portfolio</title>
+    <!--libraries-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Marcin Jastrzebski</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -9,36 +13,38 @@
             font-family: Arial, Helvetica, sans-serif;
             justify-content: space-around;
             align-items: center;
-            padding: 30px;
+            padding-right: 30px;
         }
 
         header {
+            position: fixed;
+            left: 0;
             background-color: #333;
             color: #fff;
             display: flex;
             text-align: center;
+            align-items: left;
+            box-sizing: border-box;
+            height:100%;
+            width:33%;;
         }
 
-        .header-content {
+        .header_content {
             justify-content: space-between;
             align-items: center;
             margin: 0 auto;
+            padding-top: 33%;
         }
 
-        .pic {
-            flex: 1;
-            text-align: center;
-        }
-
-        .pendulum {
-            flex: 2;
-            text-align: center;
+        .circular_image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            clip-path: circle(50%);
+            object-fit: cover;
         }
 
         nav {
-            position: fixed;
-            top: 0;
-            left: 0;
             background-color: #333;
             padding: 0px;
             color: #fff;
@@ -47,7 +53,6 @@
         nav ul {
             list-style-type: none;
             padding: 0;
-            display: flex;
         }
 
         nav ul li {
@@ -55,56 +60,88 @@
         }
 
         nav a {
-            text-decoration: none;
+            text-decoration:none;
             color: #fff;
+        }
+        .content{
+            margin-left: 33%; /* Adjust the margin as needed */
+            padding: 20px; /* Add padding to create space */
+            background-color: #fff; /* Set background color */
         }
 
     </style>
 </head>
+
+
+
 <body>
     <header>
+    
+    <div class="header_content">
 
+    <img src="pic_of_me.jpeg" alt="Picture of Me" class="circular_image" >
+
+    <h1>Marcin Jastrzebski</h1>
+
+    <a href="https://www.linkedin.com/in/marcin-jastrzebski-2b734817a/">
+        <i class="fab fa-linkedin" style="font-size:48px;color:rgb(0, 0, 0)"></i>
+    </a>
+    
+    <a href = "https://github.com/marcinjastrzebski8">
+        <i class="fab fa-github" style="font-size:48px;color:rgb(0, 0, 0)"></i>
+    </a>
+
+    <!-- Navigation Links -->
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="science_art.htm">//science+art//</a></li>
         </ul>
     </nav>
 
-    <div class="header_content">
-    <div class="pic">
-        <h1>My Website</h1>
-        <p>A website created by me.</p>
-        <img src="pic_of_me.jpeg" alt="Picture of Me (Very handsome)" width="200">
-    </div>
+    <section id="contact">
+        <h3>Contact Me</h3>
+        <p>Feel free to shoot me an email at ucapjas@ucl.ac.uk or a message on linkedin.</p>
+    </section>    
 
-    <div class="pendulum">
-        <h2>Portfolio</h2>
-        <p>This *chaotic*[hyperlink] path of a double pendulum was made uniquely just for you <3</p>
-        <img src="example_pendulum_pic.jpeg" alt="Not yet random path of a double pendulum" width="250">
-    </div>
     </div>
     </header>
     
-    <section id="about">
+    <section id="about" class = "content">
         <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <!--This needs changing but I like the vibe :)-->
+        <p>I'm a PhD student at the UCL High Energy Physics Group.
+            My supervisor is Dr Sarah Malik and I'm researching how
+            quantum computers could be used by particle physicists.
+            I grew up in Poland and moved to the UK to pursue higher education.
+            Each year I grow more fascinated by physics, maths and science.
+            I'm super greatful for the privilige to discover their secrets
+            as a career.
+        </p>
+        <p>
+            I studied for an integrated Masters degree in Physics with Particle Physics and Cosmology
+            at Lancaster University. I started my degree being mostly busy dealing with moving
+            to a different country by myself. After a year or so it clicked that I have a real 
+            chance to become a scientist, which had previously never really occurred to me,
+            not having much exposure to the world of research back home.
+        </p>
+        <p>
+            I was drawn to abstract and mathsy stuff, first becoming fascinated by the science
+            of fundamental particles and quantum mechanics, then the cosmos on the large scale.
+            Then I learned about quantum computation. I was introduced to programming, and that was
+            awesome, too.
+        </p>
+        <p>
+            Science can be quite obscure. It's boring and confusing to people who aren't 
+            naturally drawn to it. Weirdly, even when presented by professionals to
+            other professionals, the meaning can get lost in technical jargon.
+            This website is partially an exercise in science communication.
+        </p>
     </section>
 
-    <section id="portfolio">
-        <h2>My Portfolio</h2>
-        <ul>
-            <li><a href="#">Project 1</a></li>
-            <li><a href="#">Project 2</a></li>
-            <li><a href="#">Project 3</a></li>
-        </ul>
-    </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>You can reach me at contact@example.com.</p>
-    </section>
     
 </body>
 </html>
