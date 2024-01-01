@@ -114,79 +114,63 @@
         </div>
     </header>
 
-    <!--These to have pics, prolly a class-->
-    <!--Defo need to work on the titles and descriptions-->
-
-    <!--I defo wanna do this, would be a quite big project-->
-    <!---
-    <section id="blog:the_mind_project" class="content">
-        <h2>
-            <a href="">
-                Mind, described
-            </a>
-        </h2>
-
-        <p>
-            I created a mathematical model visualising the dynamics of my thoughts.
-        </p>
-        <p>
-            Disclaimer: this has nothing to do with actual neuroscience or psychology.
-            It's a coding/art project.
-        </p>
-    </section>
-
-    <section id="blog:qec_project" class="content">
-        <h2>
-            <a href="">
-                Useful qubits
-            </a>
-        </h2>
-
-        <p>
-            To be decided but something inspired by Riverlane work.
-            Maybe find the prettiest qec code?
-        </p>
-    </section>
-    
-    <section id="blog:qe_svm_decision_boundaries" class="content">
-        <h2>
-            <a href="">
-                Where to draw the line
-            </a>
-        </h2>
-
-        <p>
-            Get a glimpse of quantum-generated four-dimensional spaces.
-        </p>
-    </section>
-
-    <section id="blog:masters_thesis" class="content">
-        <h2>
-            <a href="">
-                Slide to the left, slide to the right!!!
-            </a>
-        </h2>
-
-        <p>
-            The GLUONS??? are moving SIDEWAYS??? inside PROTONS???
-        </p>
-        <p>
-            Now, you gotta know about this...
-        </p>
-    </section>
--->
     <section id="blog:3rd_yr_python" class="content">
         <h2>
-            <a href="">
-                Chaos is pretty
-            </a>
+            Chaos is pretty
         </h2>
 
         <p>
-            The science of chaos is fascinating and beautiful.
+            Deterministic chaos means a system is unpredictable even though it is not random.
+            We can know exactly how to calculate what happens to it yet be unable to make conclusions about its long
+            term evolution.
+            This can happen if tiny changes to a system now result in major differences in behaviour later on. [footnote
+            that this is not the only condition necessary for chaos]
+            Any measurement of the system you make now will have finite accuracy and precision and any computer will
+            have finite precision when you use it to simulate the system.
+            This means you might not have enough information to understand your system forever, or maybe not even for a
+            week
+            (which happens with weather).
+            Deterministic chaos is many things but let's focus on a really important one; pretty.
+
+            TODO: finish reading the wiki article bc it's interesting and then move on to making a mini-app here.
+            At first it'll just randomly choose an image from a set of pre-made ones.
+            [potentially hard and maybe unfeasable computing times] Would be cool to have a real-time generator based on
+            time of day when site is entered.
+            ALSO IDEA FOR ARTSY LOOKING IMAGES: zoom in to regions of the full pic. Add some effects?
         </p>
+
+        <div id="random_pendulum_image">
+            <!-- random images should appear here -->
+        </div>
+
     </section>
 
+
+    <script>
+        // This from chatgpt
+        // Array of image URLs
+        var imagePool = [
+            'example_pendulum_pic.jpeg',
+            'pic_of_me.jpeg',
+            // Add more image URLs as needed
+        ];
+
+        // Function to randomly choose an image from the pool
+        function getRandomImage() {
+            var randomIndex = Math.floor(Math.random() * imagePool.length);
+            return imagePool[randomIndex];
+        }
+
+        // Function to update the image on the webpage
+        function updateImage() {
+            var randomImageContainer = document.getElementById('random_pendulum_image');
+            var randomImageURL = getRandomImage();
+            randomImageContainer.innerHTML = '<img src="' + randomImageURL + '" alt="Random Image">';
+        }
+
+        // Call the updateImage function to display a random image when the page loads
+        updateImage();
+    </script>
 </body>
 
 </html>
