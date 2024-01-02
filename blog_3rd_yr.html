@@ -100,7 +100,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="works.html">Works</a></li>
+                    <li><a href="research.html">Research</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="science_art.htm">//science+art//</a></li>
                 </ul>
@@ -132,28 +132,126 @@
             (which happens with weather).
             Deterministic chaos is many things but let's focus on a really important one; pretty.
 
-            TODO: finish reading the wiki article bc it's interesting and then move on to making a mini-app here.
-            At first it'll just randomly choose an image from a set of pre-made ones.
+            <!--
             [potentially hard and maybe unfeasable computing times] Would be cool to have a real-time generator based on
-            time of day when site is entered.
-            ALSO IDEA FOR ARTSY LOOKING IMAGES: zoom in to regions of the full pic. Add some effects?
+            time of day when site is entered. 
+            Also very very cool would be for this to be animated and evolving (dads idea lol)
+            Should defo look into that
+            -->
         </p>
 
         <div id="random_pendulum_image">
             <!-- random images should appear here -->
         </div>
-
+        <p>
+            Add some caption
+        </p>
     </section>
 
 
     <script>
         // This from chatgpt
         // Array of image URLs
-        var imagePool = [
-            'example_pendulum_pic.jpeg',
-            'pic_of_me.jpeg',
-            // Add more image URLs as needed
-        ];
+        var imagePool = ['1_4708_2_0667.png',
+            '1_5375_2_1000.png',
+            '1_3375_1_9000.png',
+            '1_4041_2_0667.png',
+            '1_4041_1_9000.png',
+            '1_3375_2_0667.png',
+            '1_5041_2_0333.png',
+            '1_2708_2_1000.png',
+            '1_4708_1_9000.png',
+            '1_5708_2_0333.png',
+            '1_3708_1_9000.png',
+            '1_5041_2_1000.png',
+            '1_2708_2_0333.png',
+            '1_3041_1_9000.png',
+            '1_4375_2_0667.png',
+            '1_5708_2_1000.png',
+            '1_4375_1_9000.png',
+            '1_3041_2_0667.png',
+            '1_5375_2_0333.png',
+            '1_3708_2_0667.png',
+            '1_4708_1_9667.png',
+            '1_4375_2_1333.png',
+            '1_4375_2_2000.png',
+            '1_3375_2_0000.png',
+            '1_4041_1_9667.png',
+            '1_2708_2_1667.png',
+            '1_3708_2_1333.png',
+            '1_4041_2_0000.png',
+            '1_3375_1_9667.png',
+            '1_3708_2_2000.png',
+            '1_5041_1_9333.png',
+            '1_4708_2_0000.png',
+            '1_3041_2_1333.png',
+            '1_3041_2_2000.png',
+            '1_5708_1_9333.png',
+            '1_5375_2_1667.png',
+            '1_3708_2_0000.png',
+            '1_4041_2_1333.png',
+            '1_4041_2_2000.png',
+            '1_2708_1_9333.png',
+            '1_4708_2_1333.png',
+            '1_3041_2_0000.png',
+            '1_4375_1_9667.png',
+            '1_4708_2_2000.png',
+            '1_4375_2_0000.png',
+            '1_3041_1_9667.png',
+            '1_5708_2_1667.png',
+            '1_5375_1_9333.png',
+            '1_3708_1_9667.png',
+            '1_3375_2_1333.png',
+            '1_3375_2_2000.png',
+            '1_5041_2_1667.png',
+            '1_3041_1_9333.png',
+            '1_5708_2_2000.png',
+            '1_5708_2_1333.png',
+            '1_5375_1_9667.png',
+            '1_3708_1_9333.png',
+            '1_3375_2_1667.png',
+            '1_5041_2_2000.png',
+            '1_2708_2_0000.png',
+            '1_5041_2_1333.png',
+            '1_4041_2_1667.png',
+            '1_2708_1_9667.png',
+            '1_4708_2_1667.png',
+            '1_4375_1_9333.png',
+            '1_5375_2_0000.png',
+            '1_3708_2_1667.png',
+            '1_3375_1_9333.png',
+            '1_5041_1_9667.png',
+            '1_3041_2_1667.png',
+            '1_5375_2_2000.png',
+            '1_5708_1_9667.png',
+            '1_5375_2_1333.png',
+            '1_4708_1_9333.png',
+            '1_4375_2_1667.png',
+            '1_5708_2_0000.png',
+            '1_4041_1_9333.png',
+            '1_2708_2_2000.png',
+            '1_2708_2_1333.png',
+            '1_5041_2_0000.png',
+            '1_3041_2_0333.png',
+            '1_4708_2_1000.png',
+            '1_5375_2_0667.png',
+            '1_4041_2_1000.png',
+            '1_3708_2_0333.png',
+            '1_2708_1_9000.png',
+            '1_3375_2_1000.png',
+            '1_2708_2_0667.png',
+            '1_4375_2_0333.png',
+            '1_5375_1_9000.png',
+            '1_3375_2_0333.png',
+            '1_5041_2_0667.png',
+            '1_4375_2_1000.png',
+            '1_5708_2_0667.png',
+            '1_3041_2_1000.png',
+            '1_4708_2_0333.png',
+            '1_5708_1_9000.png',
+            '1_4041_2_0333.png',
+            '1_3708_2_1000.png',
+            '1_5041_1_9000.png']
 
         // Function to randomly choose an image from the pool
         function getRandomImage() {
@@ -165,7 +263,7 @@
         function updateImage() {
             var randomImageContainer = document.getElementById('random_pendulum_image');
             var randomImageURL = getRandomImage();
-            randomImageContainer.innerHTML = '<img src="' + randomImageURL + '" alt="Random Image">';
+            randomImageContainer.innerHTML = `<img src="blog_3rd_yr_images/${randomImageURL}" alt="Random Image">`;
         }
 
         // Call the updateImage function to display a random image when the page loads
