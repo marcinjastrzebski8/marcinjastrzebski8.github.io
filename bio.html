@@ -45,6 +45,21 @@
             clip-path: circle(50%);
             object-fit: cover;
         }
+        .grid_container { /* for the icons grid image ; it's 600x600 and 4x4*/
+            position: relative;
+            width: 600px;
+            height:600px;
+            overflow: hidden;
+        }
+        .grid_image1 { 
+            position: absolute;
+            top: -450px;
+            left: -450px;
+            right: -0px;
+            bottom: -0px;
+            width:600px;
+            height:600px;
+        }
 
         nav {
             background-color: #333;
@@ -78,6 +93,7 @@
 </head>
 
 
+
 <body>
     <header>
 
@@ -100,9 +116,8 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="research.html">Research</a></li>
-                    <li><a href="bio.html">Bio</a></li>
-                    <!--<li><a href="blog.html">Blog</a></li>-->
-                    <!--<li><a href="science_art.htm">//science+art//</a></li>-->
+                    <!-- <li><a href="blog.html">Blog</a></li> -->
+                    <!-- <li><a href="science_art.htm">//science+art//</a></li> -->
                 </ul>
             </nav>
 
@@ -114,67 +129,22 @@
         </div>
     </header>
 
-
-    <section id="qe_svm_galaxies" class="content">
-        <h2>
-            <a
-                href="https://www.semanticscholar.org/paper/A-quantum-enhanced-support-vector-machine-for-Hassanshahi-Jastrz%C4%99bski/ec605a2a58e4cb30d52cb2c11cfd314c4b905f7e">
-                A quantum-enhanced support vector machine for galaxy classification</a>
-        </h2>
-
-        <p>
-            A collaboration with the Astrophysics Group at UCL.
-            First time we got results from a real quantum device.
-        </p>
-
-        <p>
-            2023, UCL
-        </p>
+    <section id="bio" class="content">
+        <h1>Bio</h1>
+        <h2>PhD at UCL</h2>
+        <div class="grid_container">
+            <img src="OIUGXV1.svg" alt="Icon" class="grid_image1">
+        </div>
+        <p></p>
+        <h2>Physics Ambassador</h2>
+        <p></p>
+        <h2>Undergrad at Lancaster university</h2>
+        <p></p>
+        <h2>High school</h2>
+        <p></p>
     </section>
 
-    <section id="qe_svm_tracking" class="content">
-        <h2>
-            <a href="https://arxiv.org/abs/2212.07279">
-                Reconstrucing charged particle track segments with a quantum-enhanced
-                support vector machine</a>
-        </h2>
 
-        <p>My first paper. Intersection of quantum computing,
-            machine learning, and high energy physics.
-        </p>
-
-        <p>
-            2022, UCL
-        </p>
-    </section>
-
-    <section id="masters_project" class="content">
-        <h2>
-            <a href="mphys_thesis.pdf">
-                Gluons moving sideways and how to find them: Transverse
-                momentum dependent parton distributions from the J/ψ + γ
-                final state
-            </a>
-        </h2>
-
-        <p>Masters project at Lancaster University</p>
-
-        <p>
-            2021, Lancaster University
-        </p>
-    </section>
-
-    <section id="python_3rd_yr_project" class="content">
-        <h2>
-            <a href="python_proj_3rd_yr.pdf">
-                Numerical modelling and analysis of the double pendulum motion
-            </a>
-        </h2>
-
-        <p>3rd year python project at Lancaster University</p>
-
-        <p>2020, Lancaster University</p>
-    </section>
 
 </body>
 
