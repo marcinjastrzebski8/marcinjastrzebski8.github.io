@@ -10,25 +10,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        
         body {
             font-family: Arial, Helvetica, sans-serif;
             justify-content: space-around;
             align-items: center;
-            padding-right: 30px;
+            height:100%; /* whatever is the parent of header needs to be height 100% */
+            padding:0px;
+            margin:0px;
+        }
+        div {
+            overflow-y: auto;
+            height: 100%;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            height:100%;
+            margin: 0 auto;
         }
 
         header {
-            position: fixed;
-            left: 0;
             background-color: #333;
             color: #fff;
-            display: flex;
             text-align: center;
             align-items: left;
-            box-sizing: border-box;
-            height: 100%;
-            width: 33%;
-            ;
+            flex:1;
+            padding: 10px;
         }
 
         .header_content {
@@ -36,6 +44,26 @@
             align-items: center;
             margin: 0 auto;
             padding-top: 33%;
+        }
+        .icon{
+            height:50px;
+            width:50px;
+            position: relative;
+            max-height: 100%;
+            overflow-y:hidden;
+        }
+        main {
+            flex:2;
+            padding: 10px;
+            padding-bottom:60px;
+            overflow-y:auto;
+        }
+        .content {
+            /* Adjust the margin as needed */
+            padding: 20px;
+            /* Add padding to create space */
+            background-color: #fff;
+            /* Set background color */
         }
 
         .circular_image {
@@ -66,116 +94,121 @@
             color: #fff;
         }
 
-        .content {
-            margin-left: 33%;
-            /* Adjust the margin as needed */
-            padding: 20px;
-            /* Add padding to create space */
-            background-color: #fff;
-            /* Set background color */
+        footer {
+            bottom:0;
+            width:100%;
+            text-align: center;
+            color:darkgrey;
+            padding:10px;
+            border-top: 1px solid darkgray;
         }
     </style>
 </head>
 
 
 <body>
-    <header>
+    <div class="container">
+        <header>
 
-        <div class="header_content">
+            <div class="header_content">
 
-            <img src="pic_of_me.jpeg" alt="Picture of Me" class="circular_image">
+                <img src="pic_of_me.jpeg" alt="Picture of Me" class="circular_image">
 
-            <h1>Marcin Jastrzebski</h1>
+                <h1>Marcin Jastrzebski</h1>
 
-            <a href="https://www.linkedin.com/in/marcin-jastrzebski-2b734817a/">
-                <i class="fab fa-linkedin" style="font-size:48px;color:rgb(0, 0, 0)"></i>
-            </a>
+                <a href="https://www.linkedin.com/in/marcin-jastrzebski-2b734817a/">
+                    <i class="fab fa-linkedin" style="font-size:48px;color:rgb(0, 0, 0)"></i>
+                </a>
 
-            <a href="https://github.com/marcinjastrzebski8">
-                <i class="fab fa-github" style="font-size:48px;color:rgb(0, 0, 0)"></i>
-            </a>
+                <a href="https://github.com/marcinjastrzebski8">
+                    <i class="fab fa-github" style="font-size:48px;color:rgb(0, 0, 0)"></i>
+                </a>
 
-            <!-- Navigation Links -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="bio.html">Bio</a></li>
-                    <!--<li><a href="blog.html">Blog</a></li>-->
-                    <!--<li><a href="science_art.htm">//science+art//</a></li>-->
-                </ul>
-            </nav>
+                <!-- Navigation Links -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="bio.html">Bio</a></li>
+                        <!--<li><a href="blog.html">Blog</a></li>-->
+                        <!--<li><a href="science_art.htm">//science+art//</a></li>-->
+                    </ul>
+                </nav>
 
-            <section id="contact">
-                <h3>Contact Me</h3>
-                <p>Feel free to shoot me an email at ucapjas@ucl.ac.uk or a message on linkedin.</p>
+                <section id="contact">
+                    <h3>Contact Me</h3>
+                    <p>Feel free to shoot me an email at ucapjas@ucl.ac.uk or a message on linkedin.</p>
+                </section>
+
+            </div>
+        </header>
+        <main>
+
+            <section id="qe_svm_galaxies" class="content">
+                <h2>
+                    <a
+                        href="https://www.semanticscholar.org/paper/A-quantum-enhanced-support-vector-machine-for-Hassanshahi-Jastrz%C4%99bski/ec605a2a58e4cb30d52cb2c11cfd314c4b905f7e">
+                        A quantum-enhanced support vector machine for galaxy classification</a>
+                </h2>
+
+                <p>
+                    A collaboration with the Astrophysics Group at UCL.
+                    First time we got results from a real quantum device.
+                </p>
+
+                <p>
+                    2023, UCL
+                </p>
             </section>
 
-        </div>
-    </header>
+            <section id="qe_svm_tracking" class="content">
+                <h2>
+                    <a href="https://arxiv.org/abs/2212.07279">
+                        Reconstrucing charged particle track segments with a quantum-enhanced
+                        support vector machine</a>
+                </h2>
 
+                <p>My first paper. Intersection of quantum computing,
+                    machine learning, and high energy physics.
+                </p>
 
-    <section id="qe_svm_galaxies" class="content">
-        <h2>
-            <a
-                href="https://www.semanticscholar.org/paper/A-quantum-enhanced-support-vector-machine-for-Hassanshahi-Jastrz%C4%99bski/ec605a2a58e4cb30d52cb2c11cfd314c4b905f7e">
-                A quantum-enhanced support vector machine for galaxy classification</a>
-        </h2>
+                <p>
+                    2022, UCL
+                </p>
+            </section>
 
-        <p>
-            A collaboration with the Astrophysics Group at UCL.
-            First time we got results from a real quantum device.
-        </p>
+            <section id="masters_project" class="content">
+                <h2>
+                    <a href="mphys_thesis.pdf">
+                        Gluons moving sideways and how to find them: Transverse
+                        momentum dependent parton distributions from the J/ψ + γ
+                        final state
+                    </a>
+                </h2>
 
-        <p>
-            2023, UCL
-        </p>
-    </section>
+                <p>Masters project at Lancaster University</p>
 
-    <section id="qe_svm_tracking" class="content">
-        <h2>
-            <a href="https://arxiv.org/abs/2212.07279">
-                Reconstrucing charged particle track segments with a quantum-enhanced
-                support vector machine</a>
-        </h2>
+                <p>
+                    2021, Lancaster University
+                </p>
+            </section>
 
-        <p>My first paper. Intersection of quantum computing,
-            machine learning, and high energy physics.
-        </p>
+            <section id="python_3rd_yr_project" class="content">
+                <h2>
+                    <a href="python_proj_3rd_yr.pdf">
+                        Numerical modelling and analysis of the double pendulum motion
+                    </a>
+                </h2>
 
-        <p>
-            2022, UCL
-        </p>
-    </section>
+                <p>3rd year python project at Lancaster University</p>
 
-    <section id="masters_project" class="content">
-        <h2>
-            <a href="mphys_thesis.pdf">
-                Gluons moving sideways and how to find them: Transverse
-                momentum dependent parton distributions from the J/ψ + γ
-                final state
-            </a>
-        </h2>
-
-        <p>Masters project at Lancaster University</p>
-
-        <p>
-            2021, Lancaster University
-        </p>
-    </section>
-
-    <section id="python_3rd_yr_project" class="content">
-        <h2>
-            <a href="python_proj_3rd_yr.pdf">
-                Numerical modelling and analysis of the double pendulum motion
-            </a>
-        </h2>
-
-        <p>3rd year python project at Lancaster University</p>
-
-        <p>2020, Lancaster University</p>
-    </section>
-
+                <p>2020, Lancaster University</p>
+            </section>
+            <footer>
+                <p>&copy; 2024 Marcin Jastrzebski</p>
+            </footer>
+        </main>
+    </div>
 </body>
 
 </html>
