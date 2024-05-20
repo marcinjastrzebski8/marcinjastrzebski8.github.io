@@ -10,36 +10,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        
+        html{height:100%;
+        margin:0;
+        overflow-y:auto;
+        max-height: 100%;
+    }
         body {
+            display: flex;
             font-family: Arial, Helvetica, sans-serif;
-            justify-content: space-around;
             align-items: center;
             height:100%; /* whatever is the parent of header needs to be height 100% */
             padding:0px;
-            margin:0px;
-        }
-        div {
-            overflow-y: auto;
-            height: 100%;
-        }
-        .container{
-            display: flex;
-            flex-direction: row;
-            height:100%;
-            margin: 0 auto;
+            margin: 0;
+            overflow-y:auto;
+            max-height: 100%;
         }
 
         header {
             background-color: #333;
             color: #fff;
             text-align: center;
-            align-items: left;
-            flex:1;
-            padding: 10px;
+            display: flex;
+            flex: 1;
+            height: inherit;
+            justify-content: flex-start;
+            padding:10px;
+            overflow-y: hidden;
         }
 
-        .header_content {
+        main {
+            flex:2;
+            overflow-y:auto;
+            height:inherit;
+            padding:10px;
+        }
+
+        div {
+            overflow-y: auto;
+            height: 100%;
+        }
+        header .header_content {
             justify-content: space-between;
             align-items: center;
             margin: 0 auto;
@@ -52,12 +62,7 @@
             max-height: 100%;
             overflow-y:hidden;
         }
-        main {
-            flex:2;
-            padding: 10px;
-            padding-bottom:60px;
-            overflow-y:auto;
-        }
+        
         .content {
             /* Adjust the margin as needed */
             padding: 20px;
@@ -99,15 +104,16 @@
             width:100%;
             text-align: center;
             color:darkgrey;
-            padding:10px;
+            padding-top:10px;
             border-top: 1px solid darkgray;
+            margin:0;
         }
     </style>
 </head>
 
 
 <body>
-    <div class="container">
+
         <header>
 
             <div class="header_content">
@@ -157,7 +163,7 @@
                 </p>
 
                 <p>
-                    2023, UCL
+                    2023 (published in RASTI), UCL
                 </p>
             </section>
 
@@ -168,12 +174,13 @@
                         support vector machine</a>
                 </h2>
 
-                <p>My first paper. Intersection of quantum computing,
-                    machine learning, and high energy physics.
+                <p>We calculate what is called the 'kernel matrix' on a quantum device and use that to define
+                    a machine learning  model (a support vector machine) which is used to classify small connections 
+                    between hits left by particles in a detector as belonging (or not) to a particle track.
                 </p>
 
                 <p>
-                    2022, UCL
+                    2022 (published 2024 in Physical Review D), UCL
                 </p>
             </section>
 
@@ -208,7 +215,7 @@
                 <p>&copy; 2024 Marcin Jastrzebski</p>
             </footer>
         </main>
-    </div>
+
 </body>
 
 </html>

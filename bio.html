@@ -10,36 +10,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        
+        html{height:100%;
+        margin:0;
+        overflow-y:auto;
+        max-height: 100%;
+    }
         body {
+            display: flex;
             font-family: Arial, Helvetica, sans-serif;
-            justify-content: space-around;
             align-items: center;
             height:100%; /* whatever is the parent of header needs to be height 100% */
             padding:0px;
-            margin:0px;
-        }
-        div {
-            overflow-y: auto;
-            height: 100%;
-        }
-        .container{
-            display: flex;
-            flex-direction: row;
-            height:100%;
-            margin: 0 auto;
+            margin: 0;
+            overflow-y:auto;
+            max-height: 100%;
         }
 
         header {
             background-color: #333;
             color: #fff;
             text-align: center;
-            align-items: left;
-            flex:1;
-            padding: 10px;
+            display: flex;
+            flex: 1;
+            height: inherit;
+            justify-content: flex-start;
+            padding:10px;
+            overflow-y: hidden;
         }
 
-        .header_content {
+        main {
+            flex:2;
+            overflow-y:auto;
+            height:inherit;
+            padding:10px;
+        }
+
+        div {
+            overflow-y: auto;
+            height: 100%;
+        }
+        header .header_content {
             justify-content: space-between;
             align-items: center;
             margin: 0 auto;
@@ -52,12 +62,7 @@
             max-height: 100%;
             overflow-y:hidden;
         }
-        main {
-            flex:2;
-            padding: 10px;
-            padding-bottom:60px;
-            overflow-y:auto;
-        }
+        
         .content {
             /* Adjust the margin as needed */
             padding: 20px;
@@ -99,8 +104,9 @@
             width:100%;
             text-align: center;
             color:darkgrey;
-            padding:10px;
+            padding-top:10px;
             border-top: 1px solid darkgray;
+            margin:0;
         }
     </style>
 </head>
@@ -108,122 +114,122 @@
 
 
 <body>
-    <div class="container">
-        <header>
 
-            <div class="header_content">
+    <header>
 
-                <img src="pic_of_me.jpeg" alt="Picture of Me" class="circular_image">
+        <div class="header_content">
 
-                <h1>Marcin Jastrzebski</h1>
+            <img src="pic_of_me.jpeg" alt="Picture of Me" class="circular_image">
 
-                <a href="https://www.linkedin.com/in/marcin-jastrzebski-2b734817a/">
-                    <i class="fab fa-linkedin" style="font-size:48px;color:rgb(0, 0, 0)"></i>
-                </a>
+            <h1>Marcin Jastrzebski</h1>
 
-                <a href="https://github.com/marcinjastrzebski8">
-                    <i class="fab fa-github" style="font-size:48px;color:rgb(0, 0, 0)"></i>
-                </a>
+            <a href="https://www.linkedin.com/in/marcin-jastrzebski-2b734817a/">
+                <i class="fab fa-linkedin" style="font-size:48px;color:rgb(0, 0, 0)"></i>
+            </a>
 
-                <!-- Navigation Links -->
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="bio.html">Bio</a></li>
-                        <!-- <li><a href="blog.html">Blog</a></li> -->
-                        <!-- <li><a href="science_art.htm">//science+art//</a></li> -->
-                    </ul>
-                </nav>
+            <a href="https://github.com/marcinjastrzebski8">
+                <i class="fab fa-github" style="font-size:48px;color:rgb(0, 0, 0)"></i>
+            </a>
 
-                <section id="contact">
-                    <h3>Contact Me</h3>
-                    <p>Feel free to shoot me an email at ucapjas@ucl.ac.uk or a message on linkedin.</p>
-                </section>
+            <!-- Navigation Links -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <!-- <li><a href="blog.html">Blog</a></li> -->
+                    <!-- <li><a href="science_art.htm">//science+art//</a></li> -->
+                </ul>
+            </nav>
 
-            </div>
-        </header>
-        <main>
-
-            <section id="bio" class="content">
-                <h1>Bio</h1>
-
-                <h3>PhD at UCL 2021-ongoing</h3>
-                <div class="icon">
-                    <img src="icons/science-think-svgrepo-com.svg" alt="Icon">
-                </div>
-
-                <p>
-                    Developing quantum machine learning algorithms to tackle the most computatonally-heavy aspects of analysis in high energy physics.
-                </p>
-
-                <h3>Internship at Riverlane 2023-2024</h3>
-                <div class="icon">
-                    <img src="icons/science-think-svgrepo-com.svg" alt="Icon">
-                </div>
-                <p>
-                    Riverlane is a company solving the problem of quantum error correction.
-                    I worked on open problems in well-known quantum error correction experiments.
-                </p>
-
-                <h3>Teaching assistance and outreach roles at UCL 2021-ongoing</h3>
-                <div class="icon">
-                    <img src="icons/persons-in-a-class-svgrepo-com.svg" alt="Icon">
-                </div>
-
-                <p>
-                    Helping deliver outreach particle physics masterclasses and teaching first years (coding and basic lab practices) and fourth years (advanced computing techniques).
-                </p>
-
-                <h3>Internship at Lancaster University Summer 2020 </h3>
-                <div class="icon">
-                    <img src="icons/science-think-svgrepo-com.svg" alt="Icon">
-                </div>
-                <p>
-                    Worked with Elmer (finite element software) to perform initial simulations for an experiment designed to detect axions (potential candidate for dark matter).
-                    It pretty much involved simulating a microwave!
-                    
-                </p>
-
-                <h3>Physics Ambassador 2019-2021</h3>
-                <div class="icon">
-                    <img src="icons/persons-in-a-class-svgrepo-com.svg" alt="Icon">
-                </div>
-
-                <p>
-                    Helped deliver varous outreach events, from particle physics masterclasses for A-level students to building periscopes with 7-year-olds.
-                    I also helped with running the National Astronomy Meeting in 2019.
-                </p>
-
-                <h3>Undergrad at Lancaster University 2017-2021</h3>
-
-                <div class="icon">
-                    <img src="icons/science-book-svgrepo-com.svg" alt="Icon">
-                </div>
-
-                <p>
-                    Specialised in particle physics and cosmology.
-                    To make my living I had to work part-time for up to 30hrs a week rolling burritos and serving drinks in a bar.
-                    That wasn't very fun. I'm having much more fun now, though!
-                </p>
-
-                <h3>High school in Turek, Poland 2014-2017</h3>
-                <div class="icon">
-                    <img src="icons/science-book-svgrepo-com.svg" alt="Icon">
-                </div>
-
-                <p>
-                    Did my matura (A-level equivalent) in my humble hometown's high school I LO Turek (general-education high shcool number one of Turek).
-                    At this point had no clue I'd ever become a scientist, I just liked physics and maths.
-                </p>
-
-                
+            <section id="contact">
+                <h3>Contact Me</h3>
+                <p>Feel free to shoot me an email at ucapjas@ucl.ac.uk or a message on linkedin.</p>
             </section>
-            <footer>
-                <p>&copy; 2024 Marcin Jastrzebski</p>
-            </footer>
-        </main>
-    </div>
+
+        </div>
+    </header>
+    <main>
+
+        <section id="bio" class="content">
+            <h1>Bio</h1>
+
+            <h3>PhD at UCL 2021-ongoing</h3>
+            <div class="icon">
+                <img src="icons/science-think-svgrepo-com.svg" alt="Icon">
+            </div>
+
+            <p>
+                Developing quantum machine learning algorithms to tackle the most computatonally-heavy aspects of analysis in high energy physics.
+            </p>
+
+            <h3>Internship at Riverlane 2023-2024</h3>
+            <div class="icon">
+                <img src="icons/science-think-svgrepo-com.svg" alt="Icon">
+            </div>
+            <p>
+                Riverlane is a company solving the problem of quantum error correction.
+                I worked on open problems in well-known quantum error correction experiments.
+            </p>
+
+            <h3>Teaching assistance and outreach roles at UCL 2021-ongoing</h3>
+            <div class="icon">
+                <img src="icons/persons-in-a-class-svgrepo-com.svg" alt="Icon">
+            </div>
+
+            <p>
+                Helping deliver outreach particle physics masterclasses and teaching first years (coding and basic lab practices) and fourth years (advanced computing techniques).
+            </p>
+
+            <h3>Internship at Lancaster University Summer 2020 </h3>
+            <div class="icon">
+                <img src="icons/science-think-svgrepo-com.svg" alt="Icon">
+            </div>
+            <p>
+                Worked with Elmer (finite element software) to perform initial simulations for an experiment designed to detect axions (potential candidate for dark matter).
+                It pretty much involved simulating a microwave!
+                
+            </p>
+
+            <h3>Physics Ambassador 2019-2021</h3>
+            <div class="icon">
+                <img src="icons/persons-in-a-class-svgrepo-com.svg" alt="Icon">
+            </div>
+
+            <p>
+                Helped deliver varous outreach events, from particle physics masterclasses for A-level students to building periscopes with 7-year-olds.
+                I also helped with running the National Astronomy Meeting in 2019.
+            </p>
+
+            <h3>Undergrad at Lancaster University 2017-2021</h3>
+
+            <div class="icon">
+                <img src="icons/science-book-svgrepo-com.svg" alt="Icon">
+            </div>
+
+            <p>
+                Specialised in particle physics and cosmology.
+                To make my living I had to work part-time for up to 30hrs a week rolling burritos and serving drinks in a bar.
+                That wasn't very fun. I'm having much more fun now, though!
+            </p>
+
+            <h3>High school in Turek, Poland 2014-2017</h3>
+            <div class="icon">
+                <img src="icons/science-book-svgrepo-com.svg" alt="Icon">
+            </div>
+
+            <p>
+                Did my matura (A-level equivalent) in my humble hometown's high school I LO Turek (general-education high shcool number one of Turek).
+                At this point had no clue I'd ever become a scientist, I just liked physics and maths.
+            </p>
+
+            
+        </section>
+        <footer>
+            <p>&copy; 2024 Marcin Jastrzebski</p>
+        </footer>
+    </main>
+
 </body>
 
 </html>

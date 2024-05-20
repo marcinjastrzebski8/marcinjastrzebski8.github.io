@@ -10,36 +10,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        
+        html{height:100%;
+        margin:0;
+        overflow-y:auto;
+        max-height: 100%;
+    }
         body {
+            display: flex;
             font-family: Arial, Helvetica, sans-serif;
-            justify-content: space-around;
             align-items: center;
             height:100%; /* whatever is the parent of header needs to be height 100% */
             padding:0px;
-            margin:0px;
-        }
-        div {
-            overflow-y: auto;
-            height: 100%;
-        }
-        .container{
-            display: flex;
-            flex-direction: row;
-            height:100%;
-            margin: 0 auto;
+            margin: 0;
+            overflow-y:auto;
+            max-height: 100%;
         }
 
         header {
             background-color: #333;
             color: #fff;
             text-align: center;
-            align-items: left;
-            flex:1;
-            padding: 10px;
+            display: flex;
+            flex: 1;
+            height: inherit;
+            justify-content: flex-start;
+            padding:10px;
+            overflow-y: hidden;
         }
 
-        .header_content {
+        main {
+            flex:2;
+            overflow-y:auto;
+            height:inherit;
+            padding:10px;
+        }
+
+        div {
+            overflow-y: auto;
+            height: 100%;
+        }
+        header .header_content {
             justify-content: space-between;
             align-items: center;
             margin: 0 auto;
@@ -52,12 +62,7 @@
             max-height: 100%;
             overflow-y:hidden;
         }
-        main {
-            flex:2;
-            padding: 10px;
-            padding-bottom:60px;
-            overflow-y:auto;
-        }
+        
         .content {
             /* Adjust the margin as needed */
             padding: 20px;
@@ -99,8 +104,9 @@
             width:100%;
             text-align: center;
             color:darkgrey;
-            padding:10px;
+            padding-top:10px;
             border-top: 1px solid darkgray;
+            margin:0;
         }
     </style>
 </head>
@@ -108,90 +114,89 @@
 
 
 <body>
-    <div class="container">
-        <header>
-        
-            <div class="header_content">
+    <header>
+    
+        <div class="header_content">
 
-                <img src="pic_of_me.jpeg" alt="Picture of Me" class="circular_image">
+            <img src="pic_of_me.jpeg" alt="Picture of Me" class="circular_image">
 
-                <h1>Marcin Jastrzebski</h1>
+            <h1>Marcin Jastrzebski</h1>
 
-                <a href="https://www.linkedin.com/in/marcin-jastrzebski-2b734817a/">
-                    <i class="fab fa-linkedin" style="font-size:48px;color:rgb(0, 0, 0)"></i>
-                </a>
+            <a href="https://www.linkedin.com/in/marcin-jastrzebski-2b734817a/">
+                <i class="fab fa-linkedin" style="font-size:48px;color:rgb(0, 0, 0)"></i>
+            </a>
 
-                <a href="https://github.com/marcinjastrzebski8">
-                    <i class="fab fa-github" style="font-size:48px;color:rgb(0, 0, 0)"></i>
-                </a>
+            <a href="https://github.com/marcinjastrzebski8">
+                <i class="fab fa-github" style="font-size:48px;color:rgb(0, 0, 0)"></i>
+            </a>
 
-                <!-- Navigation Links -->
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="bio.html">Bio</a></li>
-                        <!-- <li><a href="blog.html">Blog</a></li> -->
-                        <!-- <li><a href="science_art.htm">//science+art//</a></li> -->
-                    </ul>
-                </nav>
+            <!-- Navigation Links -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <!-- <li><a href="blog.html">Blog</a></li> -->
+                    <!-- <li><a href="science_art.htm">//science+art//</a></li> -->
+                </ul>
+            </nav>
 
-                <section id="contact">
-                    <h3>Contact Me</h3>
-                    <p>Feel free to shoot me an email at ucapjas@ucl.ac.uk or a message on linkedin.</p>
-                </section>
-
-            </div>
-        </header>
-
-        <main>
-            <section id="about" class="content">
-                <h2>About Me</h2>
-                <!--This needs changing but I like the vibe :)-->
-                <p>I'm a PhD student at the UCL High Energy Physics group.
-                    My supervisor is Dr Sarah Malik and I'm researching how
-                    quantum computers could be used by particle physicists. 
-                    I decided to focus on quantum machine learning and how it can aid 
-                    us in the most computationally intensive problems of experimental analysis.
-                </p>
-                <p>
-                    I grew up in Poland and moved to the UK to pursue higher education.
-                    Each year I grow more fascinated by physics, maths and science.
-                    I'm super greatful for the privilige to discover their secrets
-                    as a career.
-                </p>
-                <p>
-                    I studied for an integrated Masters degree in Physics with Particle Physics and Cosmology
-                    at Lancaster University. I started my degree being mostly busy dealing with moving
-                    to a different country by myself. After a year or so it clicked that I have a real
-                    chance to become a scientist, which had previously never really occurred to me,
-                    not having much exposure to the world of research back home.
-                </p>
-                <p>
-                    I was drawn to abstract and mathsy stuff, first becoming fascinated by the science
-                    of fundamental particles and quantum mechanics, then the cosmos on the large scale.
-                    Then I learned about quantum computation. I was introduced to programming, and that was
-                    awesome, too.
-                </p>
-                <p>
-                    I'm hoping to populate this website with acessible blog posts about my research as well as whatever creative projects I get up to.
-                    For now, it's just another place where you can find <a href="research.html">  my research works</a> and <a href="bio.html"> my education and professional history</a>.
-                    Check back soon!
-                </p>
-
-                <!--
-                <p>
-                    Science can be quite obscure. It's boring and confusing to people who aren't
-                    naturally drawn to it. Weirdly, even when presented by professionals to
-                    other professionals, the meaning can get lost in technical jargon.
-                    This website is partially an exercise in science communication.
-                </p>-->
+            <section id="contact">
+                <h3>Contact Me</h3>
+                <p>Feel free to shoot me an email at ucapjas@ucl.ac.uk or a message on linkedin.</p>
             </section>
-            <footer>
-                <p>&copy; 2024 Marcin Jastrzebski</p>
-            </footer>
-        </main>
-    </div>
+
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="content">
+            <h2>About Me</h2>
+            <!--This needs changing but I like the vibe :)-->
+            <p>I'm a PhD student at the UCL High Energy Physics group.
+                My supervisor is Dr Sarah Malik and I'm researching how
+                quantum computers could be used by particle physicists. 
+                I decided to focus on quantum machine learning and how it can aid 
+                us in the most computationally intensive problems of experimental analysis.
+            </p>
+            <p>
+                I grew up in Poland and moved to the UK to pursue higher education.
+                Each year I grow more fascinated by physics, maths and science.
+                I'm super greatful for the privilige to discover their secrets
+                as a career.
+            </p>
+            <p>
+                I studied for an integrated Masters degree in Physics with Particle Physics and Cosmology
+                at Lancaster University. I started my degree being mostly busy dealing with moving
+                to a different country by myself. After a year or so it clicked that I have a real
+                chance to become a scientist, which had previously never really occurred to me,
+                not having much exposure to the world of research back home.
+            </p>
+            <p>
+                I was drawn to abstract and mathsy stuff, first becoming fascinated by the science
+                of fundamental particles and quantum mechanics, then the cosmos on the large scale.
+                Then I learned about quantum computation. I was introduced to programming, and that was
+                awesome, too.
+            </p>
+            <p>
+                I'm hoping to populate this website with acessible blog posts about my research as well as whatever creative projects I get up to.
+                For now, it's just another place where you can find <a href="research.html">  my research works</a> and <a href="bio.html"> my education and professional history</a>.
+                Check back soon!
+            </p>
+
+
+            <!--
+            <p>
+                Science can be quite obscure. It's boring and confusing to people who aren't
+                naturally drawn to it. Weirdly, even when presented by professionals to
+                other professionals, the meaning can get lost in technical jargon.
+                This website is partially an exercise in science communication.
+            </p>-->
+        </section>
+        <footer>
+            <p>&copy; 2024 Marcin Jastrzebski</p>
+        </footer>
+    </main>
 </body>
 
 </html>
