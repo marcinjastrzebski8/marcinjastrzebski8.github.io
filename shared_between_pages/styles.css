@@ -21,7 +21,7 @@ header {
     color: #fff;
     text-align: center;
     display: flex;
-    flex: 1;
+    flex: 0 0 auto;
     margin: 0 auto;
     position:fixed;
     top: 0;
