@@ -1,0 +1,114 @@
+html {
+    height:100%;
+    margin:0;
+    overflow-y:auto;
+    max-height: 100%;
+}
+body {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    text-align: center;
+    height:100%; /* whatever is the parent of header needs to be height 100% */
+    padding:0px;
+    margin: 0;
+    overflow-y:auto;
+    max-height: 100%;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex: 1;
+    margin: 0 auto;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 33%;
+    height: inherit;
+    justify-content: flex-start;
+    padding:10px;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+
+div {
+    overflow-y: auto;
+    height: 100%;
+}
+header .header_content {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 33%;
+}
+
+main {
+    flex:1;
+    overflow-y:auto;
+    height:inherit;
+    padding:10px;
+    margin-left: 33%;
+    box-sizing: border-box;
+}
+
+.icon{
+    height:50px;
+    width:50px;
+    position: relative;
+    max-height: 100%;
+    overflow-y:hidden;
+}
+
+.content {
+    /* Adjust the margin as needed */
+    padding: 20px;
+    /* Add padding to create space */
+    background-color: #fff;
+    /* Set background color */
+}
+
+.circular_image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    clip-path: circle(50%);
+    object-fit: cover;
+}
+
+nav {
+    background-color: #333;
+    padding: 0px;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    color: darkgrey;
+    padding: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-top: 1px solid darkgray;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    bottom:0;
+}
+

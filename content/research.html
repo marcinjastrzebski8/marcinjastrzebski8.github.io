@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--This I think is like a config file-->
+
+<head>
+    <!--libraries-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Marcin Jastrzebski</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../shared_between_pages/styles.css">
+</head>
+
+
+<body>
+
+    <div class="header_content" id="header"></div>
+    <main>
+
+        <section id="riverlane_reset" class="content">
+            <h2>
+                <a
+                    href="https://arxiv.org/abs/2408.00758">
+                    To reset, or not to reset -- that is the question</a>
+            </h2>
+
+            <p>
+                We consider an important detail in quantum error correction experiments - the reset after an error correction round.
+                This paper offers important insights into when experiments should or should not opt to reset their qubits. 
+                My first (intense) exposure to the world of fault-tolerant quantum computing.
+            </p>
+
+            <p>
+                2024, Riverlane
+            </p>
+        </section>
+
+        <section id="qae_callum" class="content">
+            <h2>
+                <a
+                    href="https://arxiv.org/abs/2407.07961">
+                    Unsupervised Beyond-Standard-Model Event Discovery at the LHC with a Novel Quantum Autoencoder</a>
+            </h2>
+
+            <p>
+                We use a quantum autoencoder to look for a needle (evidence of new physics) in a haystack (simulated events at the LHC).
+                We improve on two existing studies and begin to investigate the magic (! this is a real metric used in quantum information) and entanglement of the circuits used.
+            </p>
+
+            <p>
+                2024, UCL
+            </p>
+        </section>
+
+        <section id="qe_svm_galaxies" class="content">
+            <h2>
+                <a
+                    href="https://www.semanticscholar.org/paper/A-quantum-enhanced-support-vector-machine-for-Hassanshahi-Jastrz%C4%99bski/ec605a2a58e4cb30d52cb2c11cfd314c4b905f7e">
+                    A quantum-enhanced support vector machine for galaxy classification</a>
+            </h2>
+
+            <p>
+                A collaboration with the Astrophysics Group at UCL.
+                First time we got results from a real quantum device.
+            </p>
+
+            <p>
+                2023 (published in RASTI), UCL
+            </p>
+        </section>
+
+        <section id="qe_svm_tracking" class="content">
+            <h2>
+                <a href="https://arxiv.org/abs/2212.07279">
+                    Reconstrucing charged particle track segments with a quantum-enhanced
+                    support vector machine</a>
+            </h2>
+
+            <p>We calculate what is called the 'kernel matrix' on a quantum device and use that to define
+                a machine learning  model (a support vector machine) which is used to classify small connections 
+                between hits left by particles in a detector as belonging (or not) to a particle track.
+            </p>
+
+            <p>
+                2022 (published 2024 in Physical Review D), UCL
+            </p>
+        </section>
+
+        <section id="masters_project" class="content">
+            <h2>
+                <a href="mphys_thesis.pdf">
+                    Gluons moving sideways and how to find them: Transverse
+                    momentum dependent parton distributions from the J/ψ + γ
+                    final state
+                </a>
+            </h2>
+
+            <p>Masters project at Lancaster University</p>
+
+            <p>
+                2021, Lancaster University
+            </p>
+        </section>
+
+        <section id="python_3rd_yr_project" class="content">
+            <h2>
+                <a href="python_proj_3rd_yr.pdf">
+                    Numerical modelling and analysis of the double pendulum motion
+                </a>
+            </h2>
+
+            <p>3rd year python project at Lancaster University</p>
+
+            <p>2020, Lancaster University</p>
+        </section>
+        <div id="footer"></div>
+    </main>
+    <script>
+        fetch('../shared_between_pages/header.html')
+            .then(response => response.text())
+            .then(data=>document.getElementById('header').innerHTML = data);
+
+        fetch('../shared_between_pages/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+
+    </script> 
+</body>
+
+</html>
