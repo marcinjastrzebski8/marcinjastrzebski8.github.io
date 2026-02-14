@@ -3,10 +3,6 @@
 <!--This I think is like a config file-->
 
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <!--libraries-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -24,11 +20,9 @@
     <main>
         <section id="about" class="content">
             <h2>About Me</h2>
-            <p>I'm a Research Associate at The University of Sheffield, working with Prof. Oleksandr Kyriienko on quantum machine learning.
-            </p>
-
-            <p>I did my PhD at the UCL High Energy Physics group.
-                My supervisor was Dr Sarah Malik and I was researching how
+            <!--This needs changing but I like the vibe :)-->
+            <p>I'm a PhD student at the UCL High Energy Physics group.
+                My supervisor is Dr Sarah Malik and I'm researching how
                 quantum computers could be used by particle physicists. 
                 I decided to focus on quantum machine learning and how it can aid 
                 us in the most computationally intensive problems of experimental analysis.
@@ -36,7 +30,8 @@
             <p>
                 I grew up in Poland and moved to the UK to pursue higher education.
                 Each year I grow more fascinated by physics, maths and science.
-                I'm super greatful for the privilige to discover their secrets for a living.
+                I'm super greatful for the privilige to discover their secrets
+                as a career.
             </p>
             <p>
                 I studied for an integrated Masters degree in Physics with Particle Physics and Cosmology

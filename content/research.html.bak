@@ -3,10 +3,6 @@
 <!--This I think is like a config file-->
 
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <!--libraries-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -22,26 +18,6 @@
     <div class="header_content" id="header"></div>
     <main>
 
-        <section id="spectral_bias" class="content">
-            <h2>
-                <a
-                    href="https://arxiv.org/abs/2506.22555">
-                    Spectral bias in Variational Quantum Machine Learning</a>
-            </h2>
-
-            <p>
-                We explore a powerful decomposition of popular QML models as Fourier series. 
-                More specifically, we break down the loss function into its frequency components and show (in experiment) that gradients at each frequency follow a property of that frequency called "redundancy".
-                That is, where frequencies have high redundancy, models learn them faster!
-                You can kind of control the redundancy by choosing how you embed your data into the quantum circuit, which, combined with the above observation, makes it a simple yet powerful tool for model design.
-                We then turn to explaining our results with some maths. 
-            </p>
-
-            <p>
-                2025, UCL
-            </p>
-        </section>
-
         <section id="riverlane_reset" class="content">
             <h2>
                 <a
@@ -56,7 +32,7 @@
             </p>
 
             <p>
-                2024 (published 2025 in npj Quantum Information), Riverlane
+                2024, Riverlane
             </p>
         </section>
 
@@ -73,7 +49,7 @@
             </p>
 
             <p>
-                2024 (published 2025 in Quantum Machine Intelligence), UCL
+                2024, UCL
             </p>
         </section>
 
